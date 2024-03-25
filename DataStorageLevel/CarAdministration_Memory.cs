@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,22 +17,29 @@ namespace DataStorageLevel
 
         public CarAdministration_Memory()
         {
-            throw new NotImplementedException();
+            cars = new Car[maxNoCars];
+            numberOfCars = 0;
         }
 
         public void AddCar(Car car)
         {
-            throw new NotImplementedException();
+            cars[numberOfCars] = car;
+            numberOfCars++;
         }
 
         public Car[] GetCars(out int noCars)
         {
-            throw new NotImplementedException();
+            noCars = this.numberOfCars;
+            return cars;
         }
 
         public Car GetLastCar()
         {
-            throw new NotImplementedException();
+            if (numberOfCars == 0)
+            {
+                return null;
+            }
+            return cars[numberOfCars - 1];
         }
     }
 }
