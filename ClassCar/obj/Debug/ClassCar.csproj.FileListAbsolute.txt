@@ -1,0 +1,6 @@
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\bin\Debug\ClassCar.dll
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\bin\Debug\ClassCar.pdb
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\obj\Debug\ClassCar.csproj.AssemblyReference.cache
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\obj\Debug\ClassCar.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\obj\Debug\ClassCar.dll
+D:\Visual Studio 2022\Projects\CarMarket_Application\ClassCar\obj\Debug\ClassCar.pdb

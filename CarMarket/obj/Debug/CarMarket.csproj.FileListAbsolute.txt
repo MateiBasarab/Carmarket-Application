@@ -1,0 +1,12 @@
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\CarMarket.exe.config
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\CarMarket.exe
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\CarMarket.pdb
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\ClassCar.dll
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\DataStorageLevel.dll
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\ClassCar.pdb
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\bin\Debug\DataStorageLevel.pdb
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\obj\Debug\CarMarket.csproj.AssemblyReference.cache
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\obj\Debug\CarMarket.csproj.CoreCompileInputs.cache
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\obj\Debug\CarMarket.csproj.Up2Date
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\obj\Debug\CarMarket.exe
+D:\Visual Studio 2022\Projects\CarMarket_Application\CarMarket\obj\Debug\CarMarket.pdb
