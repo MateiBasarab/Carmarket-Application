@@ -3,14 +3,17 @@
   "WorkspaceRootPath": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\CarMarket\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{12F40025-F99F-4580-B102-4A11FA182422}|CarMarket.csproj|D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\CarMarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12F40025-F99F-4580-B102-4A11FA182422}|CarMarket.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3E137BF3-AB6E-46C9-B98F-05C4CD342CD6}|..\\ClassCar\\ClassCar.csproj|d:\\visual studio 2022\\projects\\carmarket_application\\classcar\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8840DA59-F017-41C9-82D0-1BA462AFB2BD}|..\\DataStorageLevel\\DataStorageLevel.csproj|d:\\visual studio 2022\\projects\\carmarket_application\\datastoragelevel\\caradministration_memory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12F40025-F99F-4580-B102-4A11FA182422}|CarMarket.csproj|D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\CarMarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12F40025-F99F-4580-B102-4A11FA182422}|CarMarket.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8840DA59-F017-41C9-82D0-1BA462AFB2BD}|..\\DataStorageLevel\\DataStorageLevel.csproj|d:\\visual studio 2022\\projects\\carmarket_application\\datastoragelevel\\caradministration_filetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,44 +23,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "CarAdministration_FileText.cs",
+              "DocumentMoniker": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\DataStorageLevel\\CarAdministration_FileText.cs",
+              "RelativeDocumentMoniker": "..\\DataStorageLevel\\CarAdministration_FileText.cs",
+              "ToolTip": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\DataStorageLevel\\CarAdministration_FileText.cs",
+              "RelativeToolTip": "..\\DataStorageLevel\\CarAdministration_FileText.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T17:10:26.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CarAdministration_Memory.cs",
               "DocumentMoniker": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\DataStorageLevel\\CarAdministration_Memory.cs",
               "RelativeDocumentMoniker": "..\\DataStorageLevel\\CarAdministration_Memory.cs",
               "ToolTip": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\DataStorageLevel\\CarAdministration_Memory.cs",
               "RelativeToolTip": "..\\DataStorageLevel\\CarAdministration_Memory.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwAMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T19:55:30.531Z"
+              "WhenOpened": "2024-03-25T19:55:30.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Car.cs",
               "DocumentMoniker": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\ClassCar\\Car.cs",
               "RelativeDocumentMoniker": "..\\ClassCar\\Car.cs",
               "ToolTip": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\ClassCar\\Car.cs",
               "RelativeToolTip": "..\\ClassCar\\Car.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAA/wJIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-25T19:54:31.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\CarMarket\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Visual Studio 2022\\Projects\\CarMarket_Application\\CarMarket\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAQwA0AAAABAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-25T19:46:22.838Z"
+              "WhenOpened": "2024-03-25T19:46:22.838Z",
+              "EditorCaption": ""
             }
           ]
         }

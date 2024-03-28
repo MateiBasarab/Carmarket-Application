@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +10,19 @@ namespace ClassCar
 {
     public class Car
     {
+        private const char mainFileSeparator = '|';
+        private const char secondaryFileSeparator = '/';
+
+        private const int ID = 0;
+        private const int Brand = 1;
+        private const int Model = 2;
+        private const int Manufacturing_Year = 3;
+        private const int Color = 4;
+        private const int Price = 5;
+        private const int Options = 6;
+
         int ID_car;
-        public string name { get; set; }
+        public string brand { get; set; }
         public string model { get; set; }
         public int manufacturing_year { get; set; }
         public string color { get; set; }
@@ -20,14 +33,39 @@ namespace ClassCar
         string buyerName;
         string buyDate;
 
-        public void SetCar(int aID, string aName, string aModel, int aManufacturing_year, string aColor, string[] aOptions, int aPrice)
+        public Car()
+        {
+            brand = model = string.Empty;
+        }
+
+        public Car(string fileLine)
+        {
+            int i = 0;
+            var fileData = fileLine.Split(mainFileSeparator);
+
+            this.ID_car = Convert.ToInt32(fileData[ID]);
+            this.brand = fileData[Brand];
+            this.model = fileData[Model];
+            this.manufacturing_year = Convert.ToInt32(fileData[Manufacturing_Year]);
+            this.color = fileData[Color];
+            this.price = Convert.ToInt32(fileData[Price]);
+
+            string groupedOptions = fileData[Options];
+            string[] separatedOptions = groupedOptions.Split(secondaryFileSeparator);
+
+            options = new string[separatedOptions.Length];
+            separatedOptions.CopyTo(options, 0);
+
+        }
+
+        public void SetCar(int aID, string aBrand, string aModel, int aManufacturing_year, string aColor, string[] aOptions, int aPrice)
         {
             //In this case, the 'a' before the variable's name stands for 'argument'.
             //Example:  argumentID   -> aID
             //          argumentName -> aName ...
 
             this.ID_car = aID;
-            name = aName;
+            brand = aBrand;
             model = aModel;
             manufacturing_year = aManufacturing_year;
             color = aColor;
@@ -42,7 +80,7 @@ namespace ClassCar
         {
             Console.WriteLine("\n--------------------------------------------");
             Console.WriteLine("The car(ID: {0}) has the next properties: \n", ID_car);
-            Console.WriteLine("Brand: {0}", name);
+            Console.WriteLine("Brand: {0}", brand);
             Console.WriteLine("Model: {0}", model);
             Console.WriteLine("Manufacturing year: {0}", manufacturing_year);
             Console.WriteLine("Color: {0}", color);
@@ -60,7 +98,7 @@ namespace ClassCar
             switch (aParameter)
             {
                 case 1:
-                    return name;
+                    return brand;
                 case 2:
                     return Convert.ToString(manufacturing_year);
                 case 3:
@@ -84,6 +122,28 @@ namespace ClassCar
         public void setID(int aID)
         {
             this.ID_car = aID;
+        }
+
+        public string StringConversionForFileStorage()
+        {
+            //Unk. -> abbreviation for unknown
+            string fileFormattedCar = string.Format("{1}{0}{2}{0}{3}{0}{4}{0}{5}{0}{6}{0}",
+                mainFileSeparator,
+                ID_car.ToString(),
+                (brand ?? " Unk. "),
+                (model ?? " Unk. "),
+                (manufacturing_year.ToString() ?? " Unk. "),
+                (color ?? " Unk. "),
+                (price.ToString() ?? " Unk. ")
+                );
+
+            foreach (string option in options)
+            {
+                fileFormattedCar += string.Format("{1}{0}", secondaryFileSeparator, option);
+            }
+            fileFormattedCar += mainFileSeparator;
+
+            return fileFormattedCar;
         }
     }
 }

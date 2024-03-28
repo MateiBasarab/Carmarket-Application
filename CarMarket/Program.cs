@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -19,17 +20,24 @@ namespace CarMarket
 
         static void Main()
         {
+            Car carForFile = new Car();
+
+            string fileName = ConfigurationManager.AppSettings["fileName"];
+            CarAdministration_FileText carsAdministrationFile = new CarAdministration_FileText(fileName);
+
             CarAdministration_Memory carsAdministration = new CarAdministration_Memory();
             int noCars = 0;  //number of cars
 
             string swCase; // swCase -  switch case option
             do
             {
-                Console.WriteLine("\nA. Add a car (Read from keyboard)");
-                Console.WriteLine("D. Display info about the last car entered");
-                Console.WriteLine("F. Display cars from a file");
-                Console.WriteLine("S. Search");
-                Console.WriteLine("X. EXIT");
+                Console.WriteLine("\nA.  Add a car");
+                Console.WriteLine("D.  Display info about the last car entered");
+                Console.WriteLine("F.  Display cars from a vector");
+                Console.WriteLine("SF. Save car in file");
+                Console.WriteLine("DF. Display cars from file");
+                Console.WriteLine("S.  Search");
+                Console.WriteLine("X.  EXIT");
 
                 Console.Write("\nChoose an option: ");
                 swCase = Console.ReadLine();
@@ -40,6 +48,7 @@ namespace CarMarket
 
                         Car newCar = new Car();             // Create a new Car object
                         ReadCarKB(newCar, noCars++);        // Read car data from keyboard and set it to the new Car object
+                        carForFile = newCar;                // A temporary value so we will be able to add the car to a text file
                         carsAdministration.AddCar(newCar);  // Add the new Car object to CarAdministration_Memory
                         break;
 
@@ -47,14 +56,23 @@ namespace CarMarket
                         DisplayCar(carsAdministration.GetLastCar());
                         break;
 
-                    case "F":  // Display cars from a file or vector
+                    case "F":  // Display cars from a vector
                         Car[] cars = carsAdministration.GetCars(out noCars);
                         DisplayCars(cars, noCars);
                         break;
 
-                    case "S":  // Search a car/ cars by a specific facility
+                    case "S":  // Search a car/cars by a specific facility
                         Car[] Cars = carsAdministration.GetCars(out noCars);
                         Search(Cars);
+                        break;
+
+                    case "SF":  //Save a car in a text file
+                        carsAdministrationFile.AddCarInFile(carForFile);
+                        break;
+
+                    case "DF":  //Display saved cars from a text file
+                        Car[] fileCars = carsAdministrationFile.GetCars(out noCars);
+                        DisplayCars(fileCars, noCars);
                         break;
 
                     case "X":  //Quits the application
