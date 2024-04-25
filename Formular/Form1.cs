@@ -65,9 +65,8 @@ namespace Formular
         public Form1()
         {
             InitializeComponent();
-            //For some unknown reason , the text file is still being created in Formular\bin\Debug\{Storage.txt}
+            //The Program and the Form now share the same Text file
             string fileName = ConfigurationManager.AppSettings["fileName"];
-            //string fileName = "Storage.txt";
             string solutionFileLocation = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             string completeFilePath = solutionFileLocation + "\\" + fileName;
             carAdmin =  new CarAdministration_FileText(completeFilePath);
@@ -335,9 +334,11 @@ namespace Formular
 
         private void DisplayCars()
         {
-            
             string fileName = ConfigurationManager.AppSettings["fileName"];
-            carAdmin = new CarAdministration_FileText(fileName);
+            string solutionFileLocation = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string completeFilePath = solutionFileLocation + "\\" + fileName;
+
+            carAdmin = new CarAdministration_FileText(completeFilePath);
             int noCars = 0;
 
             Car[] Cars = carAdmin.GetCars(out noCars);

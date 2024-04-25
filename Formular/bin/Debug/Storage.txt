@@ -1,8 +1,0 @@
-0|volvo|xc60|2020|red|4500|gps/heated seats/|
-1|volvo|xc90|2019|black|4000|gps/heated seats/|
-2|toyota|aygo|2018|white|3500|gps/heated seats/climatronic/|
-3|mercedes|C-class|2017|blue|3000|gps/heated seats/comfort/|
-4|volkswagen|golf v|2016|grenn|5000|gps/heated seats/swag/|
-5|hyundai|elantra|2015|gray|6000|gps/climatronic/automatic transmission/|
-0|toyota|landcruiser|2020|gray|15000|4x4/ electric/|
-0|volvo|xc60|2015|red|15000|gps/ heated seats/|

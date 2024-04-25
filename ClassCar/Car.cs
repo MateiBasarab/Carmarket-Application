@@ -125,8 +125,15 @@ namespace ClassCar
             string optionsString = "";
             for (int i = 0; i < options.Length; i++)
             {
-                optionsString += options[i];
-                optionsString += ", ";
+                if (i != options.Length -1)
+                {
+                    optionsString += options[i];
+                    optionsString += ", ";
+                }
+                else
+                {
+                    optionsString += options[i];
+                }
             }
 
             return optionsString;
@@ -150,10 +157,19 @@ namespace ClassCar
                 (price.ToString() ?? " Unk. ")
                 );
 
-            foreach (string option in options)
+            for (int i = 0; i < options.Length; i++)
             {
-                fileFormattedCar += string.Format("{1}{0}", secondaryFileSeparator, option);
+                if(i == options.Length - 1 )
+                {
+                    fileFormattedCar += string.Format("{0}", options[i]);
+                }
+                else
+                {
+                    fileFormattedCar += string.Format("{1}{0}", secondaryFileSeparator, options[i]);
+                }
+
             }
+
             fileFormattedCar += mainFileSeparator;
 
             return fileFormattedCar;

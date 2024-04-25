@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ClassCar;
 
 using DataStorageLevel;
+using System.IO;
 
 
 namespace CarMarket
@@ -22,8 +23,12 @@ namespace CarMarket
         {
             Car carForFile = new Car();
 
+            //The Program and the Form now share the same Text file
             string fileName = ConfigurationManager.AppSettings["fileName"];
-            CarAdministration_FileText carsAdministrationFile = new CarAdministration_FileText(fileName);
+            string solutionFileLocation = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string completeFilePath = solutionFileLocation + "\\" + fileName;
+
+            CarAdministration_FileText carsAdministrationFile = new CarAdministration_FileText(completeFilePath);
 
             CarAdministration_Memory carsAdministration = new CarAdministration_Memory();
             int noCars = 0;  //number of cars
@@ -85,17 +90,6 @@ namespace CarMarket
             } while (swCase.ToUpper() != "X");
 
             Console.ReadKey();
-        }
-
-
-        public Car[] SendCarsToForm()
-        {
-            string fileName = ConfigurationManager.AppSettings["fileName"];
-            CarAdministration_FileText carsAdministrationFile = new CarAdministration_FileText(fileName);
-
-            Car[] fileCars = carsAdministrationFile.GetCars(out int noCars);
-
-            return fileCars;
         }
 
         static void ReadCarKB(Car Masina, int aID)
