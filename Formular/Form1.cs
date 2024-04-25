@@ -32,7 +32,6 @@ namespace Formular
         private Label lblPrice;
         private Label lblOptions;
 
-        /*for LAB7
         private Label lblBrandForTextBox;
         private Label lblModelForTextBox;
         private Label lblManufacturing_YearForTextbox;
@@ -50,7 +49,6 @@ namespace Formular
 
         private Button btnAdd;
         private Button btnRefresh;
-        */
 
         private Label[] lblsBrand;
         private Label[] lblsModel;
@@ -67,7 +65,7 @@ namespace Formular
         public Form1()
         {
             InitializeComponent();
-            //for some unknown reason yet, the text file is still being created in Formular\bin\Debug\{Storage.txt}
+            //For some unknown reason , the text file is still being created in Formular\bin\Debug\{Storage.txt}
             string fileName = ConfigurationManager.AppSettings["fileName"];
             //string fileName = "Storage.txt";
             string solutionFileLocation = Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.Parent.FullName;
@@ -133,7 +131,7 @@ namespace Formular
             lblOptions.Top = yStep;
             lblOptions.ForeColor = Color.DodgerBlue;
             this.Controls.Add(lblOptions);
-            /* for LAB7
+
             //Add data    ---------------------------------------------------------------
             lblBrandForTextBox = new Label();
             lblBrandForTextBox.Width = WIDTH_CONTROL;
@@ -236,10 +234,8 @@ namespace Formular
             btnRefresh.Top = yStep * 8;
             btnRefresh.Click += new EventHandler(Refresh_Click);
             this.Controls.Add(btnRefresh);
-            */
         }
 
-        /*for LAB7
         private void Refresh_Click(object sender, EventArgs e)
         {
             DisplayCars();
@@ -330,7 +326,6 @@ namespace Formular
 
 
         }
-        */
 
         private void Form1_Load(object sender, EventArgs e)
         {
