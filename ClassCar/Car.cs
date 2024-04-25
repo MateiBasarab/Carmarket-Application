@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -119,6 +120,18 @@ namespace ClassCar
             return false;
         }
 
+        public string GetOptionsAsString()
+        {
+            string optionsString = "";
+            for (int i = 0; i < options.Length; i++)
+            {
+                optionsString += options[i];
+                optionsString += ", ";
+            }
+
+            return optionsString;
+        }
+
         public void setID(int aID)
         {
             this.ID_car = aID;
@@ -144,6 +157,11 @@ namespace ClassCar
             fileFormattedCar += mainFileSeparator;
 
             return fileFormattedCar;
+        }
+
+        public string GetBrand()
+        {
+            return brand;
         }
     }
 }

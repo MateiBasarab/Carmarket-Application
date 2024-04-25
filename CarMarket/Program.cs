@@ -88,6 +88,16 @@ namespace CarMarket
         }
 
 
+        public Car[] SendCarsToForm()
+        {
+            string fileName = ConfigurationManager.AppSettings["fileName"];
+            CarAdministration_FileText carsAdministrationFile = new CarAdministration_FileText(fileName);
+
+            Car[] fileCars = carsAdministrationFile.GetCars(out int noCars);
+
+            return fileCars;
+        }
+
         static void ReadCarKB(Car Masina, int aID)
         {
             string[] aOptions = new string[20];

@@ -25,9 +25,6 @@ namespace DataStorageLevel
 
         public void AddCarInFile(Car car)
         {
-            // instructiunea 'using' va apela la final streamWriterFisierText.Close();
-            // al doilea parametru setat la 'true' al constructorului StreamWriter indica
-            // modul 'append' de deschidere al fisierului
             using (StreamWriter streamWriterTextFile = new StreamWriter(fileName, true))
             {
                 streamWriterTextFile.WriteLine(car.StringConversionForFileStorage());
@@ -49,6 +46,8 @@ namespace DataStorageLevel
                     cars[noCars++] = new Car(fileLine);
                 }
             }
+
+            Array.Resize(ref cars, noCars);
 
             return cars;
         }
